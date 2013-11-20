@@ -3,9 +3,14 @@
   <p>
     <strong>Price:</strong> <%= number_to_currency product.price %>
   </p>
+  <% if product.image_filename %>
+    <p>
+      <%= link_to image_tag(product.image_filename), product %>
+    </p>
+  <% end %>
   <% if product.category %>
     <p>
-      <strong>Category:</strong> <%=product.category.name %>
+      <strong>Cetegory:</strong> <%= product.category %>
     </p>
   <% end %>
   <div><%= product.description %></div>
