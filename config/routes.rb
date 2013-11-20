@@ -5,8 +5,8 @@ EcommFtw::Application.routes.draw do
   root :to => "store#index", :via => :get
   
   match 'products/:id' => "store#show", :as => 'product', :via => :get
-  
-  
+  match 'search' => 'store#search', :as => 'search', :via => :get
+  match 'search_results' => 'store#search_results', :as => 'search_results', :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
